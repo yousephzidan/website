@@ -1,0 +1,145 @@
+@media (min-width: 1440px) {
+  .my-photo-hero {
+    display: none !important;
+  }
+}
+
+@media (max-width: 1440px) {
+  section { 
+    article {
+      margin-right: 0px !important;
+      width: 90%;
+    } 
+  }
+  
+  section:nth-child(1) { 
+    article {
+      padding-bottom
+      height: fit-content !important;
+    } 
+  }
+
+  .my-photo {
+    display: none !important;
+  }
+
+  section:nth-child(2) {
+    article {
+      padding: 0px;
+      display: flex;
+      flex-direction: column !important;
+      gap: 24px;
+    }
+
+    img {
+      width: 100% !important;
+      height: 33% !important;
+      object-fit: cover;
+      border-radius: 16px;
+      object-position: top;
+    }
+
+    .down {
+      display: flex;
+      height: 70% !important;
+      width: 100% !important;
+      gap: 24px;
+
+      img {
+        border-radius: 16px;
+        height: 50% !important;
+        width: 100%;
+      }
+    }
+  }
+
+
+}
+
+@media (max-width: 2218px) {
+  section:nth-child(3) {
+    article {
+      display: flex;
+      flex-direction: column !important;
+      padding: 0px;
+
+      .services {
+        width: 100% !important;
+        height: fit-content !important;
+
+        .content {
+          align-items: center;
+          justify-content: center;
+
+        }
+      }
+
+      .contact-container {
+        display: flex; 
+        flex-direction: row !important;
+        gap: 24px;
+        max-height: 1200px;
+
+        .black-hill {
+          width: 50% !important;
+          height: 50% !important;
+        } 
+      } 
+      .contact {
+        background-color: #0e0e0e;
+        padding: 62px;
+        width: 100%;
+        border-radius: 16px;
+        height: fit-content !important;
+
+        gap: 24px;
+
+
+    }
+  }
+
+}
+
+
+@media (max-width: 1024px) {
+  section:nth-child(3) {
+    article {
+      display: flex;
+      flex-direction: column !important;
+      padding: 0px;
+
+      .services {
+        width: 100% !important;
+
+        .content {
+          align-items: center;
+          justify-content: center;
+
+        }
+      }
+
+      .contact-container {
+        display: flex; 
+        flex-direction: column !important;
+        gap: 24px;
+        max-height: 700px;
+
+        .black-hill {
+          width: 100% !important;
+          height: 70% !important;
+        } 
+      } 
+      .contact {
+        background-color: #0e0e0e;
+        padding: 62px;
+        width: 100%;
+        border-radius: 16px;
+        height: fit-content !important;
+
+        gap: 24px;
+
+
+    }
+  }
+
+}
