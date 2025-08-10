@@ -4,11 +4,13 @@
   }
 }
 
+
+
 @media (max-width: 1440px) {
   section { 
     article {
-      margin-right: 0px !important;
-      width: 90%;
+      margin: 0px !important;
+      width: 100% !important;
     } 
   }
   
@@ -18,6 +20,11 @@
       height: fit-content !important;
     } 
   }
+
+ section:nth-child(1) {
+    nav.sc_links {
+      display: none !important;
+    }
 
   .my-photo {
     display: none !important;
