@@ -1,7 +1,4 @@
 @media (min-width: 1440px) {
-  .my-photo-hero {
-    display: none !important;
-  }
 }
 
 
@@ -21,14 +18,7 @@
     } 
   }
 
- section:nth-child(1) {
-    nav.sc_links {
-      display: none !important;
-    }
 
-  .my-photo {
-    display: none !important;
-  }
 
   section:nth-child(2) {
     article {
