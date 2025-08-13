@@ -26,28 +26,10 @@
       display: flex;
       flex-direction: column !important;
       gap: 24px;
+      height: fit-content !important;
+      justify-content: center;
     }
 
-    img {
-      width: 100% !important;
-      height: 33% !important;
-      object-fit: cover;
-      border-radius: 16px;
-      object-position: top;
-    }
-
-    .down {
-      display: flex;
-      height: 70% !important;
-      width: 100% !important;
-      gap: 24px;
-
-      img {
-        border-radius: 16px;
-        height: 50% !important;
-        width: 100%;
-      }
-    }
   }
 
 

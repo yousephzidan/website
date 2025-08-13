@@ -1,7 +1,9 @@
 @import './media_queries.css';
 
 :root {
+
   --bg-dark: #121212;
+  --bg-dark: #232323;
   --white: rgba(255, 255, 255, 0.75);
   --white-sub: rgba(255, 255, 255, 0.50);
 }
@@ -18,7 +20,6 @@ body {
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   overflow-y: scroll;
@@ -30,8 +31,9 @@ body {
     align-items: center;
     width: 95%;
     max-width: 2300px;
-    min-height: 100vh;
     height: 100vh;
+    max-height: 1440px;
+
 
     article {
       display: flex;
@@ -45,31 +47,14 @@ body {
   }
 
   section:nth-child(1) {
-    nav.sc_links {
-      width: 70px;
-      padding: 24px;
-      height: 250px;
-      background-color: black;
-      border-radius: 50px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-evenly;
-      gap: 1rem;
-      position: fixed;
-
-      img {
-        width: 40px;
-        height: 40px;
-      }
-    }
-
+    min-height: fit-content;
     article {
       border-radius: 16px;
       background-color: #0e0e0e;
       display:flex;
       justify-content:center;
       align-items: center;
+
 
 
       h1 {
@@ -90,7 +75,7 @@ body {
       }
     }
 
-    .my-photo-hero {
+    .my-photo {
       width: 200px;
       height: 200px;
       object-fit: cover;
@@ -99,40 +84,126 @@ body {
   }
 
   section:nth-child(2) {
+    min-height: fit-content;
     article {
       padding: 0px;
-      display: flex;
-      flex-direction: row;
-    }
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(0px,600px));
+      justify-content: center;
+      row-gap: 24px;
 
-    img {
-      width: 50%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 16px;
-      object-position: top;
-    }
-
-    .down {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      width: 50%;
-
-      img {
+      .img {
+        position: relative;
+        background-size: cover;
+        height: 500px;
         border-radius: 16px;
-        height: 48%;
-        width: 100%;
+        background-size: 100%;
+        display: flex;
+        background-position: top center;
+        justify-content: center;
+        align-items: center;
+        transition: background-size .3s ease; /* Smooth zoom effect */
+        cursor: pointer;
+        background-size: 120%;
+        background-repeat: no-repeat ;
+
+        .bg-info {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: start;
+          background-color: #0e0e0e;
+          backdrop-filter: blur(20px) brightness(3) saturate(100%);
+          color: var(--white);
+
+          border-radius: 8px;
+          padding: 24px;
+          position: absolute;
+          max-height: fit-content;
+          bottom: 5%;
+          width: 90%;
+          gap: 12px;
+
+          small {
+            font-weight: bold;
+
+          } 
+
+          P {
+            transition: max-height 0.5s ease, opacity 0.5s ease;
+            display: none;
+          } 
+
+
+          &:hover {
+            p {
+              display: block;
+            }
+          }
+
+        }
+
       }
+
+
+      .img:nth-child(-n+6):not(.img:nth-child(4)) {
+        &:hover {
+          background-size: 100%;
+          .bg-info p {
+            display: block; 
+          }
+        }
+       }
+
+       .img:nth-child(1) {
+         background-image: url('./public/imgs/EcoPro.png');
+       }
+
+       .img:nth-child(2) {
+         background-image: url('./public/imgs/3dprintmodelservices.png');
+       }
+
+       .img:nth-child(3) {
+         background-image: url('./public/imgs/sealAndEcho.png');
+       }
+
+
+       .img:nth-child(4) {
+         background-size: 240% !important;
+         background-image: url('./public/imgs/Murti_jewellers.png');
+         width: 100%;
+
+         &:hover {
+          background-size: 200% !important;
+
+         }
+       }
+       .img:nth-child(5) {
+         background-image: url('./public/imgs/IT_Company_NetworkAutomation.gif');
+
+         &:hover {
+
+         }
+
+       }
+       .img:nth-child(6) {
+         background-image: url('./public/imgs/sealAndEcho.png');
+       }
+
+
     }
   }
+
+
+
+
+
 
   section:nth-child(3) {
     article {
       display: flex;
       flex-direction: row;
-      max-height: auto;
-      
+      max-height: 1440px;
       padding: 0px;
 
       .services {
@@ -159,7 +230,7 @@ body {
             background-color: black;
             border-radius: 12px;
           }
-        
+
         }
       }
       .contact-container {
@@ -202,24 +273,24 @@ body {
             object-fit: cover;
             border-radius: 12px;
           }
-        
-         nav[class='sc_links'] {
-           width: 100%;
-           padding: 24px;
-           height: 70px;
-           background-color: black;
-           border-radius: 50px;
-           display: flex;
-           align-items: center;
-           justify-content: space-evenly;
-           gap: 1rem;
 
-           img {
-             width: 40px;
-             height: 40px;
-           }
-         
-         } 
+          nav[class='sc_links'] {
+            width: 100%;
+            padding: 24px;
+            height: 70px;
+            background-color: black;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            gap: 1rem;
+
+            img {
+              width: 40px;
+              height: 40px;
+            }
+
+          } 
         }
       }
 
