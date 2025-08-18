@@ -225,9 +225,12 @@ body {
             height: 400px;
             background-color: #2C2C2C;
             border-radius: 12px;
-            dflex
+            display: flex;
+            gap: 24px;
+            flex-direction: column;
 
             h2 {
+              text-align: center;
               font-size: 32px;
             }
 
